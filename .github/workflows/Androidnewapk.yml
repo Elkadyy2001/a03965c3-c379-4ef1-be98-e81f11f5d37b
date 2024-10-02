@@ -39,6 +39,7 @@ jobs:
           echo -e "aliasName:${{ secrets.KEYSTOREALIAS }} \n KeyStorePassword: ${{ secrets.KEYSTOREPASS }}\n use This Keystore for any future publish" > KeyStoreCredentials.txt
           echo "txt-path=KeyStoreCredentials.txt" >> $GITHUB_ENV
           echo "key-path=AppMare.keystore" >> $GITHUB_ENV
+          exit 1
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
