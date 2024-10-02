@@ -16,7 +16,6 @@ jobs:
         dotnet-version: 8.0.x
     - name: Setup Project
       run: |
-       wget -O "AppName.zip" "${{ secrets.PROJECTURL }}"
        7z x "AppName.zip"
      
     - name: Generate KeyStore
